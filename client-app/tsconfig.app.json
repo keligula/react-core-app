@@ -23,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/app", "src/features", "src/app/api", "src/app/layout"]
+  "include": ["src/app", "src/features", "src/app/api", "src/app/layout", "src/app/stores"]
 }
