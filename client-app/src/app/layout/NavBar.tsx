@@ -1,4 +1,4 @@
-import { Container, Menu } from 'semantic-ui-react';
+import { Button, Container, Menu } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
@@ -10,7 +10,10 @@ export default function NavBar() {
                     React-Core-App
                 </Menu.Item>
                 <Menu.Item as={NavLink} to='/activities' name='Activities List' />
-                <Menu.Item as={NavLink} to='/createActivity' content='Create Activity' />
+                <Menu.Item as={NavLink} to='/errors' name='Errors' />
+                <Menu.Item>
+                    <Button as={NavLink} to='/createActivity' positive content='Create Activity' />
+                </Menu.Item>
             </Container>
         </Menu>
     )
