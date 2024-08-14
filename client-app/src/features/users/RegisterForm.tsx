@@ -10,12 +10,12 @@ export default observer(function RegisterForm() {
     const { userStore } = useStore();
     return (
         <Formik
-            initialValues={{ displayName: '', username: '', email: '', password: '', error: null }}
+            initialValues={{ displayName: '', userName: '', email: '', password: '', error: null }}
             onSubmit={(values, { setErrors }) =>
                 userStore.register(values).catch(error => setErrors({ error }))}
             validationSchema={Yup.object({
                 displayName: Yup.string().required(),
-                username: Yup.string().required(),
+                userName: Yup.string().required(),
                 email: Yup.string().required(),
                 password: Yup.string().required(),
             })}
@@ -24,7 +24,7 @@ export default observer(function RegisterForm() {
                 <Form className='ui form error' onSubmit={handleSubmit} autoComplete='off'>
                     <Header as='h2' content='Sign up to React-Core-App' color="teal" textAlign="center" />
                     <MyTextInput placeholder="Display Name" name='displayName' />
-                    <MyTextInput placeholder="Username" name='username' />
+                    <MyTextInput placeholder="Username" name='userName' />
                     <MyTextInput placeholder="Email" name='email' />
                     <MyTextInput placeholder="Password" name='password' type='password' />
                     <ErrorMessage name='error' render={() => 
