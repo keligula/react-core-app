@@ -67,7 +67,6 @@ export default observer(function ProfilePhotos({ profile }: Props) {
                                                 name={photo.id}
                                             />
                                         </Button.Group>
-
                                     )}
                                 </Card>
                             ))}
